@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin-left: 80px;
+	margin-right: 80px;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: gainsboro;
+}
+
+.navbar {
+	font-size: large;
+	height: 100px; border-bottom: 1px solid gainsboro;
+}
+
+.col,
+.row {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-nav > li {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-brand:hover {
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	color: steelblue;
+}
+
+#logo {
+	height: 120px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#emergencyRow {
+	padding: 12px;
+	-webkit-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+
+#emergencyTab {
+	height: 70px;
+	background-color: rgb(221, 78, 78);
+	color: aliceblue;
+}
+
+#emergencyTab :hover {
+	background-color: crimson;
+}
+
+#alertEmergency {
+	width: 40px;
+}
+
+#titleEmergency {
+	margin-top: 5px;
+	margin-left: 12px;
+	font-weight: normal;
+}
+
+/* Buat Animasi Garis Bawah */
+#emergencyQuestion{
+	color: aliceblue;
+	display: inline-block;
+	text-decoration: none;
+}
+
+#emergencyQuestion::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: antiquewhite;
+    transition: width .3s;
+}
+
+#emergencyQuestion:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/* End Comment Anismasi */
+
+.intro {
+	background-image: url(https://www.premierhealth.com/images/default-source/default-album/p-c-mkt93775-mvhhero.jpg?sfvrsn=eff72e5e_2);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	height: 500px;
+	padding: 20px;
+}
+
+.intro{
+	background-image: url(img/gradient\ biru.png);
+}
+
+#introTitle,
+#introDeskripsi,#introMore {
+	color: antiquewhite;
+}
+
+i {
+}
+
+/* Icon Panah */
+.arrowRight {
+	border: solid antiquewhite;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	width: 10px;
+	height: 10px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.arrowRightDark {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	width: 10px;
+	height: 10px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+/* Buat Animasi Garis Bawah */
+#introMore{
+	color: aliceblue;
+	display: inline-block;
+	text-decoration: none;
+}
+
+#introMore::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: antiquewhite;
+    transition: width .3s;
+}
+
+#introMore:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/* End Comment Animasi */
+
+#introHead{
+	padding-top: 30px;
+	padding-left: 80px;
+}
+
+#introMore{
+	margin-top: 20px;
+	margin-left: 8px;
+}
+
+.about > .row > .col{
+	padding-top: 80px;
+}
+
+.about > .row > .col{
+	padding-top: 80px;
+}
+
+.about > .row > .col:not(:first-child){
+	border-right: 1px solid gainsboro;
+}
+
+.title.row.justify-content-between{
+	margin-bottom: 80px;
+}
+
+.aboutTitle.display-4{
+	padding-left: 30px;
+	font-weight: bold;
+	
+}
+
+
+#girlWithMask{
+	width: 400px; height: 500px; object-fit: cover;
+}
+
+.aboutImg{
+	height:120px; 
+	padding-left: 80px;
+}
+
+
+
+
