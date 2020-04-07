@@ -34,7 +34,7 @@ body {
 	color: steelblue;
 }
 
-#logo {
+.logo {
 	height: 120px;
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -189,7 +189,9 @@ i {
 
 
 #girlWithMask{
-	width: 400px; height: 500px; object-fit: cover;
+	width: 500px; 
+	height: 500px; 
+	object-fit: cover;
 }
 
 .aboutImg{
@@ -197,6 +199,112 @@ i {
 	padding-left: 80px;
 }
 
+.aboutList.list-group.list-group-flush{
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.aboutList.list-group.list-group-flush > li > a{
+	text-decoration: none;
+	color: black;
+}
 
+/* Bagian News */
+.article{
+	background-color: gainsboro;
+}
+.blueBox{
+	color: antiquewhite;
+	background-color: #004a80;
+	width: 500px;
+	height: 150px;
+}
 
+#newsIcon{
+	width: 30px;
+	height: 30px;
+	margin-bottom: 5px;
+}
 
+#viewAllNewsText{
+	text-decoration: none;
+	color: black;
+}
+
+.arrowRight2{
+	width: 15px;
+}
+
+.showcaseArticle{
+	margin-top: 25px;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+.newsSec{
+	/* somehow harus embbeded */
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-left: 25px;
+	margin-right: 25px;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid black;
+	border-spacing: 0 5px;
+}
+
+.newsSec :hover{
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	color: #004a80;
+}
+
+.newsDate{
+	font-size: small;
+}
+
+.newsTitle{
+	font-size: xx-large;
+	margin-bottom: 100px;
+}
+
+/* bagian akhir */
+.arrowRight3 {
+	width: 20px;
+}
+
+.boxRekrut1{
+	background-color: #438580; 
+	padding: 100px;
+	height: 500px;
+}
+
+.rekrutTittle{
+	color: white;
+	margin-bottom: 150px;
+}
+
+.rekrutAnchor{
+	text-decoration: none;
+}
+
+.rekrutDisMor{
+	color: white;
+}
+
+.rekrutLink{
+	border-bottom: 3px solid white;
+}
+
+/* footer */
+.footerIcon{
+	width: 20px;
+	height: 20px;
+	margin-right: 12px;
+}
+
+.footerIconSocial{
+	width: 28px;
+	height: 28px;
+	
+}
