@@ -276,7 +276,7 @@ i {
 .boxRekrut1{
 	background-color: #438580; 
 	padding: 100px;
-	height: 500px;
+	/* height: 500px; */
 }
 
 .rekrutTittle{
@@ -308,3 +308,6 @@ i {
 	height: 28px;
 	
 }
+
+/* Bagian Corona Table */
+.corona
