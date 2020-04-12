@@ -22,6 +22,11 @@ body {
 	padding: 0;
 }
 
+.display-5{
+	font-weight: 300;
+	font-size: xx-large;
+}
+
 .navbar-nav > li {
 	margin-left: 50px;
 	margin-right: 50px;
@@ -309,5 +314,16 @@ i {
 	
 }
 
-/* Bagian Corona Table */
-.corona
+
+/* MASUK PAGE CAMPUS */
+.arrowWhiteAnchorWithBottomBorder{
+	border-bottom: 1px solid black;
+	width: 160px;
+}
+
+.arrowWhiteAnchorWithBottomBorder > a{
+	text-decoration: none;
+	color: black;
+}
+
+/* END OF PAGE CAMPUS */
