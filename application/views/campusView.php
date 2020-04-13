@@ -1,71 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campus</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-
-<body>
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">CWC</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Articel</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/campus.html">Campus</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Our Team</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <!-- Ini bisa berubah jadi username kalo dah login -->
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-
-        <div class="row">
-            <div class="col-2">
-                <img class="logo" src="https://pngimage.net/wp-content/uploads/2018/05/cdc-logo-png-5.png" alt="" />
-            </div>
-            <div class="col-4">
-                <!-- MegaMenu Goes Here i think(?) -->
-            </div>
-        </div>
-        <!-- Button trigger modal -->
-    </header>
-
-    <!-- model id = ...number ,number ini adalah id data -->
+<!-- model id = ...number ,number ini adalah id data -->
 
     <!-- Title Campus -->
     <div class="campusTitleBar row">
@@ -312,7 +245,3 @@
         </div>
     </div>
     <!-- End of View Campus -->
-
-</body>
-
-</html>

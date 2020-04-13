@@ -315,7 +315,20 @@ i {
 }
 
 
-/* MASUK PAGE CAMPUS */
+/* ++++++++++++++ MASUK PAGE CAMPUS ++++++++++++++ */
+.campusTitleBar{
+	height: 250px; background-color: steelblue;
+}
+
+.titleCampus{
+	padding-left: 20px; padding-bottom: 20px; color: white;
+}
+
+.titleCampusImage{
+	background-image: url(img/ryan-jacobson-cXUOQWdRV4I-unsplash.jpg);
+	background-size: cover;
+}
+
 .arrowWhiteAnchorWithBottomBorder{
 	border-bottom: 1px solid black;
 	width: 160px;
@@ -326,4 +339,34 @@ i {
 	color: black;
 }
 
-/* END OF PAGE CAMPUS */
+/* View Campus Card */
+.campusCoronaData > .col:not(:first-child){
+	border-left: 1px solid black;
+}
+
+.campusCoronaData > .col > h2{
+	font-weight: 300;
+}
+
+.nearHospitalText{
+	font-weight: 300; border-top: 1px solid black;
+}
+
+/* End of View Campus Card */
+
+
+/* ++++++++++++++ END OF PAGE CAMPUS ++++++++++++++ */
+
+/* ++++++++++++++ MASUK PAGE ARTICLE ++++++++++++++ */
+.articleTitleBar{
+	height: 250px; background-color: steelblue;
+}
+
+.titleArticleImage{
+	background-image: url(img/the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg);
+	background-size: cover;
+}
+
+
+
+/* ++++++++++++++ END OF PAGE ARTICLE ++++++++++++++ */
