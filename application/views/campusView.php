@@ -11,7 +11,7 @@
     </div>
     <!-- end of Title Campus -->
 
-    <!-- Add Campus -->
+    <!-- Add Campus button -->
     <div class="arrowWhiteAnchorWithBottomBorder ml-4 mt-4">
         <a class="" href=""  data-toggle="modal" data-target="#addCampusModal">
             <div class="d-flex align-self-end">
@@ -24,28 +24,31 @@
             </div>
         </a>
     </div>
-    <!-- end of Add Campus -->
+    <!-- end of Add Campus button -->
 
     <!-- Card Campus -->
-    <div class="row align-self-center mt-5 ml-5 mr-4">  
+    <div class="row align-self-center mt-5 ml-5 mr-4">
+        <?php foreach ($data as $d) {?>  
         <div class="col-lg-3 col-md-3 mb-4">
             <div class="card rounded-0" style="width: 18rem;">
                 <img src="https://m.ayobandung.com/images-bandung/post/articles/2019/08/13/60534/gedung_tel_u_(800_x_531).jpg"
                     class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title display-5">Telkom University</h5>
+                    <h5 class="card-title display-5"><?= $d -> namakampus ?></h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Positive : 120</li>
-                    <li class="list-group-item">Death : 20</li>
+                    <li class="list-group-item">Positive : <?= $d-> jumlahTerjangkit?></li>
+                    <li class="list-group-item">Death : <?= $d-> jumlahTerMeninggal?></li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link" data-toggle="modal" data-target="#viewCampusModal1">View</a>
-                    <a href="#" class="card-link" data-toggle="modal" data-target="#editCampusModal1">Edit</a>
-                    <a href="#" class="card-link">Delete</a>
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#viewCampusModal<?= $d->id?>">View</a>
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#editCampusModal<?= $d->id?>">Edit</a>
+                    <a href="php code goes here" class="card-link">Delete</a>
                 </div>
             </div>
         </div>
+        <?php } ?>
+
     </div>
     <!-- End Of Card Campus -->
 
@@ -58,7 +61,7 @@
                     <h4 class="display-4">Add Campus</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- isi form ini -->
+                    <!-- isi form ini, TAMBAHIN ACTIONnya HAM -->
                     <form method="POST" action="php stuff goes here">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Campus Name</label>
@@ -112,7 +115,8 @@
     <!-- End Of model add campus -->
 
     <!-- Modal Edit Campus , id = ...number ,number ini adalah id data -->
-    <div class="modal fade" id="editCampusModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <?php foreach ($data as $d) {?>
+    <div class="modal fade" id="editCampusModal<?= $d -> id?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content rounded-0">
@@ -125,42 +129,42 @@
                         <div class="form-group">
                             <label for="formGroupExampleInput">Campus Name</label>
                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Campus Name"
-                                name="namakampus" required>
+                                name="namakampus" value="<?= $d->namakampus ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Total Positive</label>
                             <input type="text" class="form-control" id="formGroupExampleInput"
-                                placeholder="Total Positive" name="jumlahTerjangkit" required>
+                                placeholder="Total Positive" name="jumlahTerjangkit" value="<?= $d->jumlahTerjangkit ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total Death</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Total Death" name="jumlahMeninggal" required>
+                                placeholder="Total Death" name="jumlahMeninggal" value="<?= $d->jumlahMeninggal ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total Cure</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Total Death" name="jumlahSembuh" required>
+                                placeholder="Total Death" name="jumlahSembuh" value="<?= $d->jumlahSembuh ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total ODP</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total ODP"
-                                name="jumlahODP" required>
+                                name="jumlahODP" value="<?= $d->jumlahODP ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total PDP</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total PDP"
-                                name="jumlahPDP" required>
+                                name="jumlahPDP" value="<?= $d->jumlahPDP ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total ODR</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total ODR"
-                                name="jumlahODR" required>
+                                name="jumlahODR" value="<?= $d->jumlahODR ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Nearest Hospital</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Nearest Hospital" name="rsTerdekat" required>
+                                placeholder="Nearest Hospital" name="rsTerdekat" value="<?= $d->rsTerdekat ?>" required>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -171,16 +175,18 @@
             </div>
         </div>
     </div>
+    <?php }?>
     <!-- End of modal edit Campus -->
 
     <!-- View Campus -->
-    <div class="modal fade bd-example-modal-lg" id="viewCampusModal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    <?php foreach ($data as $d) {?>
+    <div class="modal fade bd-example-modal-lg" id="viewCampusModal<?= $d->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"   
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content rounded-0">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <h4 class="display-4 mt-3 ml-2 mb-4">Telkom University</h4>
+                        <h4 class="display-4 mt-3 ml-2 mb-4"><?php $d->namaKampus ?></h4>
                         <a href="" data-dismiss="modal">
                             <svg class="mt-4 mr-2" id="Capa_1" fill="currentColor" enable-background="new 0 0 413.348 413.348" height="28" viewBox="0 0 413.348 413.348" width="28" xmlns="http://www.w3.org/2000/svg"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"/>
                             </svg>
@@ -189,34 +195,35 @@
                     <div class="campusCoronaData row text-center mb-5">
                         <div class="col">
                             <h2>Positive</h2>
-                            <h3>1,002</h3>
+                            <h3><?= $d->jumlahTerjangkit ?></h3>
                         </div>
                         
                         <div class="col" >
                             <h2>Cure</h2>
-                            <h3>1,001</h3>
+                            <h3><?= $d->jumlahSembuh ?></h3>
                         </div>
     
                         <div class="col">
                             <h2>Death</h2>
-                            <h3>-1</h3>
+                            <h3><?= $d->jumlahSembuh ?></h3>
                         </div>
                     </div>
 
                     <div class="campusCoronaData row text-center" style="margin-bottom: 30px;">
                         <div class="col">
                             <h2>ODP</h2>
-                            <h3>1,002</h3>
+                            <h3><?= $d->jumlahODP ?></h3>
                         </div>
                         
                         <div class="col">
                             <h2>PDP</h2>
-                            <h3>1,001</h3>
+                            <h3><?= $d->jumlahPDP ?></h3>
                         </div>
     
                         <div class="col">
                             <h2>ODR</h2>
-                            <h3>-1</h3>
+                            <h3><?= $d->jumlahODR ?>
+                        </h3>
                         </div>
                     </div>
 
@@ -238,10 +245,11 @@
 							/>
 						</svg>
 						<div class="lead">
-							Port Road Adelaide SA 5000 
+                        <?= $d->rsTerdekat ?> 
 						</div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
     <!-- End of View Campus -->
