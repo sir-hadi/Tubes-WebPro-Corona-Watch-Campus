@@ -26,7 +26,7 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/style.css'?>" />
 	</head>
 
 	<body>
@@ -36,7 +36,7 @@
 				<div class="row align-items-center" id="emergencyRow">
 					<div class="col-9">
 						<div class="row align-items-center">
-							<img src="img/alert.png" alt="" id="alertEmergency" />
+							<img src=" <?php echo base_url().'assets/img/alert.png'?>" alt="alert" id="alertEmergency" />
 							<h4 id="titleEmergency">EMERGENCY</h4>
 						</div>
 					</div>

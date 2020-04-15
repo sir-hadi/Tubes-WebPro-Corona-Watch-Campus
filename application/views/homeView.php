@@ -28,7 +28,7 @@
 							<h4 class="aboutTitle display-4">WHAT WE SEE</h4>
 						</div>
 						<div class="col">
-							<img class="aboutImg" id="eyeIcon" src="img/eye.png" alt="" />
+							<img class="aboutImg" id="eyeIcon" src="<?php echo base_url().'assets/img/eye.png'?>" alt="eye" />
 						</div>
 					</div>
 					<ul class="aboutList list-group list-group-flush">
@@ -60,7 +60,7 @@
 							<h4 class="aboutTitle display-4">OUR SERVICE</h4>
 						</div>
 						<div class="col">
-							<img class="aboutImg" src="img/support.png" alt="" />
+							<img class="aboutImg" src="<?php echo base_url().'assets/img/support.png'?>" alt="" />
 						</div>
 					</div>
 					<ul class="aboutList list-group list-group-flush">
@@ -115,7 +115,7 @@
 							>
 						</div>
 						<div class="iconNews col">
-							<img class="" id="newsIcon" src="img/news.png" alt="" />
+							<img class="" id="newsIcon" src="<?php echo base_url().'assets/img/news.png' ?>" alt="" />
 						</div>
 					</div>
 				</div>
@@ -136,7 +136,7 @@
 								<div class="p-2">
 									<img
 										class="arrowRight2"
-										src="img/angle-arrow-pointing-to-right.svg"
+										src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
 										alt=""
 									/>
 								</div>
@@ -156,7 +156,7 @@
 								<div class="p-2">
 									<img
 										class="arrowRight2"
-										src="img/angle-arrow-pointing-to-right.svg"
+										src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
 										alt=""
 									/>
 								</div>
@@ -176,7 +176,7 @@
 								<div class="p-2">
 									<img
 										class="arrowRight2"
-										src="img/angle-arrow-pointing-to-right.svg"
+										src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
 										alt=""
 									/>
 								</div>
@@ -232,7 +232,7 @@
 							<div class="p-2">
 								<img
 									class="arrowRight3"
-									src="img/angle-arrow-pointing-to-right.svg"
+									src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
 									alt=""
 								/>
 							</div>
@@ -269,7 +269,7 @@
 							<div class="p-2">
 								<img
 									class="arrowRight3"
-									src="img/angle-arrow-pointing-to-right.svg"
+									src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
 									alt=""
 								/>
 							</div>
@@ -297,7 +297,7 @@
 								<div class="p-2">
 									<img
 										class="arrowRight3"
-										src="img/w-angle-arrow-pointing-to-right.svg"
+										src="<?php echo base_url().'assets/img/w-angle-arrow-pointing-to-right.svg' ?>"
 										alt=""
 									/>
 								</div>
@@ -309,7 +309,7 @@
 				<div
 					class="col"
 					style="
-						background-image: url(img/you-x-ventures-Oalh2MojUuk-unsplash.jpg);
+						background-image: url(<?php echo base_url().'assets/img/you-x-ventures-Oalh2MojUuk-unsplash.jpg' ?>);
 						background-size: cover;
 					"
 				></div>
