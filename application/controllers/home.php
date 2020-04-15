@@ -11,8 +11,12 @@ class home extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data = $this->HomeModel->get_data_positif();
+		$this->load->view('navbar');
+		$this->load->view('homeView',$data);
+		$this->load->view('footer');
 	}
+
 
 }
 

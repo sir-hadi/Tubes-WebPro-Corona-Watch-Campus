@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class HomeModel extends CI_Model {
 
-	function__construct() {
-		parent::__construct();
-	}
+	// function__construct() {
+	// 	parent::__construct();
+	// }
 
 	// Ambil data pasien positif
 	public function get_data_positif() {

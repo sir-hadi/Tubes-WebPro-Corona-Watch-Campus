@@ -11,7 +11,10 @@ class rumahsakit extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data = $this->RumahSakitModel->get_all();
+		$this->load->view('navbar');
+		// $this->load->view('homeView',$data);
+		$this->load->view('footer');
 	}
 
 }

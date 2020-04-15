@@ -11,7 +11,10 @@ class kampus extends CI_Controller {
 
 	public function index()
 	{
-
+		$data = $this->KampusModel->get_all();
+		$this->load->view('navbar');
+		$this->load->view('campusView',$data);
+		$this->load->view('footer');
 	}
 
 }

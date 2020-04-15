@@ -11,7 +11,10 @@ class pasien extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data = $this->PasienModel->get_all();
+		$this->load->view('navbar');
+		// $this->load->view('paisenView',$data);
+		$this->load->view('footer');
 	}
 
 }
