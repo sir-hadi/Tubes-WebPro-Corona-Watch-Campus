@@ -3,15 +3,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class HomeModel extends CI_Model {
 
-	// function__construct() {
-	// 	parent::__construct();
-	// }
-
 	// Ambil data pasien positif
 	public function get_data_positif() {
-		$data = 'positif';
+		$data = 'Positif';
 		$this->db->where('kondisi', $data);
-		return $this->db->get('pasien')->row_array();
+		return $this->db->get('pasien')->result_array();
+	}
+
+	// Ambil data sembuh
+	public function get_data_sembuh() {
+		$data = 'Sembuh';
+		$this->db->where('kondisi', $data);
+		return $this->db->get('pasien')->result_array();
+	}
+
+	// Ambil data meninggal
+	public function get_data_meninggal() {
+		$data = 'Meninggal';
+		$this->db->where('kondisi', $data);
+		return $this->db->get('pasien')->result_array();
 	}
 
 }

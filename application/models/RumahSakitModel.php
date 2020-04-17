@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class RumahSakitModel extends CI_Model {
 
-	function__construct() {
-		parent::__construct();
-	}
-
 	// Get semua data rumahsakit
 	public function get_all(){
 		return $this->db->get('rumahsakit')->result_array();

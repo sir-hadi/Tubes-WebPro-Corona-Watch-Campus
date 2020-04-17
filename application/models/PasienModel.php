@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PasienModel extends CI_Model {
 
-	function__construct() {
-		parent::__construct();
-	}
-
 	// Get semua data pasien
 	public function get_all(){
 		return $this->db->get('pasien')->result_array();

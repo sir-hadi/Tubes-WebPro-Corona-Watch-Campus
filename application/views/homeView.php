@@ -201,29 +201,17 @@
 						  </tr>
 						</thead>
 						<tbody>
+							<?php $index=1; foreach (array_reverse($dataPasien) as $dp) { 
+								if ($index<=5) {
+							?>
 						  <tr>
-							<th scope="row">1</th>
-							<td>Mark Jojo</td>
+							<th scope="row"><?php echo $index++ ?></th>
+							<td><?php echo $dp['namaPasien'] ?></td>
 						  </tr>
-						  <tr>
-							<th scope="row">2</th>
-							<td>Jacob Jojo</td>
-						  </tr>
-						  <tr>
-							<th scope="row">3</th>
-							<td>Larry Jojo</td>
-						  </tr>
-						  <tr>
-							<th scope="row">4</th>
-							<td>Larry Jojo</td>
-						  </tr>
-						  <tr>
-							<th scope="row">5</th>
-							<td>Larry Jojo</td>
-						  </tr>
+							<?php }} ?>
 						</tbody>
 					  </table>
-					  <a class="" href="" >
+					  <a class="" href="<?= site_url('pasien') ?>" >
 						<div class="d-flex align-self-end" style="color: black; border-bottom: 1px solid black;">
 							<div class="mr-auto p-2" >
 								<p class="lead">Discover More</p>
@@ -246,21 +234,30 @@
 					<div class="row align-self-center d-flex justify-content-around text-center" style="padding-top: 60px; margin-bottom: 60px;">
 						<div class="col" style="border-right: 1px solid black;">
 							<h1 style="font-weight: 300;">Positive</h1>
-							<h2>1,002</h2>
+							<?php $positif=0; foreach ($dataPasien as $dp) {
+								$positif++;
+							} ?>
+							<h2><?php echo $positif ?></h2>
 						</div>
 						
 						<div class="col" style="border-right: 1px solid black;">
 							<h1 style="font-weight: 300;">Cure</h1>
-							<h2>1,001</h2>
+							<?php $sembuh=0; foreach ($dataSembuh as $ds) {
+								$sembuh++;
+							} ?>
+							<h2><?php echo $sembuh ?></h2>
 						</div>
 
 						<div class="col">
 							<h1 style="font-weight: 300;">Death</h1>
-							<h2>-1</h2>
+							<?php $meninggal=0; foreach ($dataMeninggal as $dm) {
+								$meninggal++;
+							} ?>
+							<h2><?php echo $meninggal ?></h2>
 						</div>
 					</div>
 
-					<a class="" href="" >
+					<a class="" href="<?= site_url('pasien') ?>" >
 						<div class="d-flex align-self-end" style="color: black; border-bottom: 1px solid black;">
 							<div class="mr-auto p-2" >
 								<p class="lead">Discover More</p>

@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class KampusModel extends CI_Model {
 
-	function__construct() {
-		parent::__construct();
-	}
-
 	// Get semua data kampus
 	public function get_all(){
 		return $this->db->get('kampus')->result_array();

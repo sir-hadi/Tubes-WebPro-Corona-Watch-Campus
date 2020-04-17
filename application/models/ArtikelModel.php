@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ArtikelModel extends CI_Model {
 
-	function__construct() {
-		parent::__construct();
-	}
-
 	// Get semua data artikel
 	public function get_all(){
 		return $this->db->get('artikel')->result_array();

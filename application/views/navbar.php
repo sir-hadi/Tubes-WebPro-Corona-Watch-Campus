@@ -50,7 +50,7 @@
 			</div>
 			<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="#">CWC</a>
+				<a class="navbar-brand" href="<?php base_url(); ?>">CWC</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -65,18 +65,18 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#"
+							<a class="nav-link" href="<?php base_url(); ?>"
 								>Home <span class="sr-only">(current)</span></a
 							>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Articel</a>
+							<a class="nav-link" href="<?= site_url('artikel') ?>">Article</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="/campus.html">Campus</a>
+							<a class="nav-link" href="<?= site_url('kampus') ?>">Campus</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Our Team</a>
+							<a class="nav-link" href="<?= site_url('pasien') ?>">Victim</a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link" href="#">About Us</a>
