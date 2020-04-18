@@ -1,6 +1,9 @@
 <div class="articleTitleBar row">
 	<div class="col d-flex align-items-end">
-		<div class="titleArticle display-4 ml-4 mb-3" >ARTICLE</div>
+		<span class="titleArticle display-4 ml-4 mb-3 pr-4 border-right border-dark" >ARTICLE</span>
+		<span class="inputArticle display-5 ml-4 mb-3" >
+			<a class="inputArticleLink" style="text-decoration: none;" href="#">Input Article</a>
+		</span>
 	</div>
 	<div
 		class="titleArticleImage col-4"	
@@ -29,66 +32,190 @@
 	also not sure If this is correct so please fix whatever is weird
  -->
 <div class="articleContainer">
-	<?php for ($i=0; $i < 2; $i++) { ?>
-		<!-- row -->
-		<div class="row align-self-center">
-			<!-- content -->
-			<?php for ($j=((0+4*$i)+8*($page-1)); $j <= ((3+4*$i)+8*($page-1)) ; $j++) { ?>
-				<!-- 
-					example: row 1(i=0) page 1 , from (0+4*0)+8*(1-1)=0 to (3+4*0)+8(1-1)=3
-						     row 2(i=2) page 1 , from (0+4*1)+8*(1-1)=4 to (3+4*1)+8(1-1)=7
-					sepparate them just in case we need to send out like 4 to 7 only?
-				 -->
-				<a class="newsSec" style="text-decoration: none;" href="">
-					<div class="newsConten">
-						<p class="newsDate lead"><?= $article[$j]["newsDate"] ?></p>
-						<h5 class="newsTitle lead"><?= $article[$j]["newsTitle"] ?></h5>
-						<!-- wait, do we need descriptions here? -->
+	<!-- row 1 -->
+	<div class="row align-self-center">
+		<!-- contents -->
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
 					</div>
-					<div class="readMoreNews d-flex">
-						<p class="readMoreText mr-auto pt-2 lead">Read More</p>
-						<div class="p-2">
-							<img
-								class="arrowRight2"
-								src="img/angle-arrow-pointing-to-right.svg"
-								alt=""
-							/>
-						</div>
-					</div>
-				</a>
-			<?php } ?>
+				</div>
+			</a>
 		</div>
-	<?php } ?>
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- end row 1 -->
+
+	<!-- row 2 -->
+	<div class="row align-self-center">
+		<!-- contents -->
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsSec col">
+			<a class="newsSec" style="text-decoration: none;" href="">
+				<div class="newsConten">
+					<p class="newsDate lead">18 November</p>
+					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+				</div>
+				<div class="readMoreNews d-flex">
+					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
+					<div class="p-2">
+						<img
+							class="arrowRight2"
+							src="img/angle-arrow-pointing-to-right.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- end row 2 -->
 </div>
 <!-- end articles -->
 
 <!-- pagination stuff -->
 <nav aria-label="page navigation bar">
 	<ul class="pagination justify-content-center">
-		<li class="page-item <?php if ($page==1) echo "disabled"; ?>">
-				<a class="page-link" href="#" <?php if ($page==1) echo "tabindex='-1'"; ?>>First</a>
+		<li class="page-item disabled">
+				<a class="page-link" href="#" tabindex="-1">First</a>
 		</li>
-		<li class="page-item <?php if ($page==1) echo "disabled"; ?>">
-				<a class="page-link" href="#" aria-label="Previous" <?php if ($page==1) echo "tabindex='-1'"; ?>>
+		<li class="page-item disabled">
+				<a class="page-link" href="#" aria-label="Previous" tabindex="-1">
 				<span aria-hidden="true">&laquo;</span>
 				<span class="sr-only">Previous</span>
 				</a>
 		</li>
-		<!-- page count in the model or? -->
-		<?php 
-
-			for ($i=0; $i < $pagecount; $i++) { ?>
-			<li class="page-item <?php if ($i==$page) echo "active"; ?>"><a class="page-link" href="#"><?= ($i+1) ?></a></li>
-			
-		<?php } ?>
-		<li class="page-item <?php if ($page==$pagecount) echo "disabled"; ?>">
-				<a class="page-link" href="#" aria-label="Next" <?php if ($page==$pagecount) echo "tabindex='-1"; ?>>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item"><a class="page-link" href="#">6</a></li>
+		<li class="page-item">
+				<a class="page-link" href="#" aria-label="Next">
 				<span aria-hidden="true">&raquo;</span>
 				<span class="sr-only">Next</span>
 				</a>
 		</li>
-		<li class="page-item <?php if ($page==$pagecount) echo "disabled"; ?>">
-				<a class="page-link" href="#" <?php if ($page==$pagecount) echo "tabindex='-1"; ?>>Last</a>
+		<li class="page-item">
+				<a class="page-link" href="#">Last</a>
 		</li>
 	</ul>
 </nav>

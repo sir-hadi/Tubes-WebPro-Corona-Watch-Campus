@@ -366,7 +366,9 @@ i {
 	background-image: url(img/the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg);
 	background-size: cover;
 }
-
+.inputArticleLink{
+	color: black;
+}
 
 
 /* ++++++++++++++ END OF PAGE ARTICLE ++++++++++++++ */
