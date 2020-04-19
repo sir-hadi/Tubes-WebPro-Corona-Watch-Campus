@@ -31,7 +31,7 @@
 					</h2>
 					<div class="col-md-6">
 						<ul class="list-unstyled" style="">
-							<li class="lead"><a href="<?php base_url(); ?>">Home</a></li>
+							<li class="lead"><a href="<?= site_url() ?>">Home</a></li>
 							<li class="lead"><a href="<?= site_url('artikel') ?>">Article</a></li>
 							<li class="lead"><a href="<?= site_url('kampus') ?>">Campus</a></li>
 							<li class="lead"><a href="<?= site_url('pasien') ?>">Victim</a></li>

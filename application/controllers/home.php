@@ -11,13 +11,19 @@ class home extends CI_Controller {
 
 	public function index()
 	{
-		$title = "CWC Homepage";
 		$content['dataPasien'] = $this->HomeModel->get_data_positif();
 		$content['dataSembuh'] = $this->HomeModel->get_data_sembuh();
 		$content['dataMeninggal'] = $this->HomeModel->get_data_meninggal();
-		$this->load->view('navbar', $title);
+		$content['artikel'] = $this->HomeModel->get_artikel();
+		$this->load->view('navbar');
 		$this->load->view('homeView',$content);
 		$this->load->view('footer');
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('/login','refresh');
 	}
 
 

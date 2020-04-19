@@ -41,16 +41,23 @@
 						</div>
 					</div>
 					<div class="col">
-						<a href="" id="emergencyQuestion"
-							>Do you have an emergency bla bla bla bla?
+						<?php if ($_SESSION['username']!="Guest") { ?>
+						<a href="" id="emergencyQuestion">
+							Hi <?php echo $_SESSION['username'] ?>, Do you have an emergency bla bla bla bla?
 							<i class="arrowRight"></i>
 						</a>
+						<?php } else { ?>
+						<a href="" id="emergencyQuestion">
+							Hi Guest, Do you have an emergency bla bla bla bla?
+							<i class="arrowRight"></i>
+						</a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
 			<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="<?php base_url(); ?>">CWC</a>
+				<a class="navbar-brand" href="<?= site_url() ?>">CWC</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -65,7 +72,7 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="<?php base_url(); ?>"
+							<a class="nav-link" href="<?= site_url() ?>"
 								>Home <span class="sr-only">(current)</span></a
 							>
 						</li>
@@ -82,9 +89,15 @@
 							<a class="nav-link" href="#">About Us</a>
 						</li>
 						<!-- Ini bisa berubah jadi username kalo dah login -->
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Login</a>
-						</li>
+						<?php if ($_SESSION['username']!="Guest") { ?>
+							<li class="nav-item active">
+								<a class="nav-link" href="<?= site_url('home/logout') ?>">Logout</a>
+							</li>
+						<?php } else { ?>
+							<li class="nav-item active">
+								<a class="nav-link" href="<?= site_url('login') ?>">Login</a>
+							</li>
+						<?php } ?>
 					</ul>
 				</div>
 			</nav>

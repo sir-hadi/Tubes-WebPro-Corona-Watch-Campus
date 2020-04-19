@@ -125,11 +125,13 @@
 			<div class="showcaseArticle">
 				<div class="row align-self-center">
 					<!-- peringkat 1 terbaru -->
+					<?php $index=1; foreach (array_reverse($artikel) as $a) { 
+						if ($index<=3) { $index++;
+					?>
 					<div class="newsSec col">
 						<a class="newsSec" style="text-decoration: none;" href="">
 							<div class="newsConten">
-								<p class="newsDate lead">18 November</p>
-								<h5 class="newsTitle lead">Go Behind Jojo</h5>
+								<h5 class="newsTitle lead"><?php echo $a['judul']; ?></h5>
 							</div>
 							<div class="readMoreNews d-flex">
 								<p class="readMoreText mr-auto pt-2 lead">Read More</p>
@@ -143,46 +145,7 @@
 							</div>
 						</a>
 					</div>
-
-					<!-- peringkat 2 terbaru -->
-					<div class="newsSec col">
-						<a class="newsSec" style="text-decoration: none;" href="">
-							<div class="newsConten">
-								<p class="newsDate lead">18 November</p>
-								<h5 class="newsTitle lead">Go Behind Jojo</h5>
-							</div>
-							<div class="readMoreNews d-flex">
-								<p class="readMoreText mr-auto pt-2 lead">Read More</p>
-								<div class="p-2">
-									<img
-										class="arrowRight2"
-										src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
-										alt=""
-									/>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<!-- peringkat 3 terbaru -->
-					<div class="newsSec col">
-						<a class="newsSec" style="text-decoration: none;" href="">
-							<div class="newsConten">
-								<p class="newsDate lead">18 November</p>
-								<h5 class="newsTitle lead">Go Behind Jojo</h5>
-							</div>
-							<div class="readMoreNews d-flex">
-								<p class="readMoreText mr-auto pt-2 lead">Read More</p>
-								<div class="p-2">
-									<img
-										class="arrowRight2"
-										src="<?php echo base_url().'assets/img/angle-arrow-pointing-to-right.svg' ?>"
-										alt=""
-									/>
-								</div>
-							</div>
-						</a>
-					</div>
+					<?php }} ?>
 				</div>
 			</div>
 		</div>

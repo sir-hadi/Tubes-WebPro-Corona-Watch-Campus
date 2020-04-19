@@ -16,7 +16,7 @@
 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="#">Homepage</a></li>
+		<li class="breadcrumb-item"><a href="<?= site_url() ?>">Homepage</a></li>
 		<li class="breadcrumb-item active" aria-current="page">Article</li>
 	</ol>
 </nav>
@@ -35,11 +35,11 @@
 	<!-- row 1 -->
 	<div class="row align-self-center">
 		<!-- contents -->
+		<?php foreach (array_reverse($artikel) as $a) { ?>
 		<div class="newsSec col">
-			<a class="newsSec" style="text-decoration: none;" href="">
+			<a class="newsSec" style="text-decoration: none;" href="<?= site_url(); ?>/artikel/read/<?= $a['idArtikel'] ?>">
 				<div class="newsConten">
-					<p class="newsDate lead">18 November</p>
-					<h5 class="newsTitle lead">Go Behind Jojo</h5>
+					<h5 class="newsTitle lead"><?php echo $a['judul']; ?></h5>
 				</div>
 				<div class="readMoreNews d-flex">
 					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
@@ -53,67 +53,11 @@
 				</div>
 			</a>
 		</div>
-		<div class="newsSec col">
-			<a class="newsSec" style="text-decoration: none;" href="">
-				<div class="newsConten">
-					<p class="newsDate lead">18 November</p>
-					<h5 class="newsTitle lead">Go Behind Jojo</h5>
-				</div>
-				<div class="readMoreNews d-flex">
-					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
-					<div class="p-2">
-						<img
-							class="arrowRight2"
-							src="img/angle-arrow-pointing-to-right.svg"
-							alt=""
-						/>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="newsSec col">
-			<a class="newsSec" style="text-decoration: none;" href="">
-				<div class="newsConten">
-					<p class="newsDate lead">18 November</p>
-					<h5 class="newsTitle lead">Go Behind Jojo</h5>
-				</div>
-				<div class="readMoreNews d-flex">
-					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
-					<div class="p-2">
-						<img
-							class="arrowRight2"
-							src="img/angle-arrow-pointing-to-right.svg"
-							alt=""
-						/>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="newsSec col">
-			<a class="newsSec" style="text-decoration: none;" href="">
-				<div class="newsConten">
-					<p class="newsDate lead">18 November</p>
-					<h5 class="newsTitle lead">Go Behind Jojo</h5>
-				</div>
-				<div class="readMoreNews d-flex">
-					<p class="readMoreText mr-auto pt-2 lead">Read More</p>
-					<div class="p-2">
-						<img
-							class="arrowRight2"
-							src="img/angle-arrow-pointing-to-right.svg"
-							alt=""
-						/>
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>
-	<!-- end row 1 -->
-
+		<?php } ?>
 	<!-- row 2 -->
-	<div class="row align-self-center">
+	<!-- <div class="row align-self-center"> -->
 		<!-- contents -->
-		<div class="newsSec col">
+		<!-- <div class="newsSec col">
 			<a class="newsSec" style="text-decoration: none;" href="">
 				<div class="newsConten">
 					<p class="newsDate lead">18 November</p>
@@ -185,7 +129,7 @@
 				</div>
 			</a>
 		</div>
-	</div>
+	</div> -->
 	<!-- end row 2 -->
 </div>
 <!-- end articles -->

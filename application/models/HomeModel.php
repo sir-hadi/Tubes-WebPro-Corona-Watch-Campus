@@ -24,6 +24,11 @@ class HomeModel extends CI_Model {
 		return $this->db->get('pasien')->result_array();
 	}
 
+	// Ambil data artikel
+	public function get_artikel() {
+		return $this->db->get('artikel')->result_array();
+	}
+
 }
 
 /* End of file HomeModel.php */

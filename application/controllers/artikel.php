@@ -11,9 +11,17 @@ class artikel extends CI_Controller {
 
 	public function index()
 	{
-		$data = $this->ArtikelModel->get_all();
+		$content['artikel'] = $this->ArtikelModel->get_all();
 		$this->load->view('navbar');
-		$this->load->view('articleView',$data);
+		$this->load->view('articleView',$content);
+		$this->load->view('footer');
+	}
+
+	public function read($id)
+	{
+		$content['artikel'] = $this->ArtikelModel->get_artikel_id($id);
+		$this->load->view('navbar');
+		$this->load->view('readArticleView',$content);
 		$this->load->view('footer');
 	}
 
