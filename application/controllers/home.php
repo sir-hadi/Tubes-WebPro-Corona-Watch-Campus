@@ -11,6 +11,9 @@ class home extends CI_Controller {
 
 	public function index()
 	{
+		if (is_null($_SESSION['username'])) {
+			$_SESSION['username'] = "Guest";
+		}
 		$content['dataPasien'] = $this->HomeModel->get_data_positif();
 		$content['dataSembuh'] = $this->HomeModel->get_data_sembuh();
 		$content['dataMeninggal'] = $this->HomeModel->get_data_meninggal();
