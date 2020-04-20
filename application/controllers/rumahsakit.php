@@ -17,6 +17,25 @@ class rumahsakit extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function tambahRS()
+	{
+		//$data = array ...
+		$this->RumahSakitModel->insert_rumahsakit($data);
+		$this->index();
+	}
+
+	public function updateRS()
+	{
+		//$data = array ...
+		$this->RumahSakitModel->update_rumahsakit($data['id_rs'],$data);
+		$this->index();
+	}
+
+	public function hapusRS($id_rs)
+	{
+		$this->RumahSakitModel->delete_rumahsakit($id_rs);
+		$this->index();
+	}
 }
 
 /* End of file rumahsakit.php */

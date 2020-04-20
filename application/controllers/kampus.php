@@ -17,6 +17,25 @@ class kampus extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function tambahKampus()
+	{
+		//$data = array ...
+		$this->KampusModel->insert_kampus($data);
+		$this->index();
+	}
+
+	public function updateKampus()
+	{
+		//$data = array ...
+		$this->KampusModel->update_kampus($data['id_kampus'],$data);
+		$this->index();
+	}
+
+	public function hapusKampus($id_kampus)
+	{
+		$this->KampusModel->delete_kampus($id_kampus);
+		$this->index();
+	}
 }
 
 /* End of file kampus.php */
