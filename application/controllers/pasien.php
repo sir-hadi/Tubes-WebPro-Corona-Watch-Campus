@@ -17,6 +17,25 @@ class pasien extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function tambahPasien()
+	{
+		//$data = array ...
+		$this->PasienModel->insert_pasien($data);
+		$this->index();
+	}
+
+	public function updatePasien()
+	{
+		//$data = array ...
+		$this->PasienModel->update_pasien($data['id_pasien'],$data);
+		$this->index();
+	}
+
+	public function hapusPasien($id_pasien)
+	{
+		$this->PasienModel->delete_pasien($id_pasien);
+		$this->index();
+	}
 }
 
 /* End of file pasien.php */
