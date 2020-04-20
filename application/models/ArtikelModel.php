@@ -37,6 +37,10 @@ class ArtikelModel extends CI_Model {
 		return $this->db->delete('artikel');
 	}
 
+	function get_artikel_list($limit, $start){
+        return $this->db->get('artikel', $limit, $start)->result_array();
+    }
+
 }
 
 /* End of file ArtikelModel.php */

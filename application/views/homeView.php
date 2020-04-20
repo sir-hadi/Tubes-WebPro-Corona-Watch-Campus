@@ -129,7 +129,7 @@
 						if ($index<=3) { $index++;
 					?>
 					<div class="newsSec col">
-						<a class="newsSec" style="text-decoration: none;" href="">
+						<a class="newsSec" style="text-decoration: none;" href="<?= site_url(); ?>/artikel/read/<?= $a['idArtikel'] ?>">
 							<div class="newsConten">
 								<h5 class="newsTitle lead"><?php echo $a['judul']; ?></h5>
 							</div>
