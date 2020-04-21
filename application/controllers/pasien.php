@@ -19,22 +19,51 @@ class pasien extends CI_Controller {
 
 	public function tambahPasien()
 	{
-		//$data = array ...
-		$this->PasienModel->insert_pasien($data);
-		$this->index();
+		$data = array (
+			'namaPasien' => $this->input->post('namaPasien'),
+			'tempatLahir' => $this->input->post('tempatLahir'),
+			'tanggalLahir' => $this->input->post('tanggalLahir'),
+			'jenisKelamin' => $this->input->post('jenisKelamin'),
+			'kampusAsal' => $this->input->post('kampusAsal'),
+			'kondisi' => $this->input->post('kondisi'),
+		);
+		$cek = $this->PasienModel->insert_pasien($data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Pasien Berhasil Ditambah');
+		} else {
+			$this->session->set_flashdata('info', 'Pasien Gagal Ditambah');
+		}
+		redirect('pasien','refresh');
 	}
 
-	public function updatePasien()
+	public function updatePasien($id)
 	{
-		//$data = array ...
-		$this->PasienModel->update_pasien($data['id_pasien'],$data);
-		$this->index();
+		$data = array (
+			'namaPasien' => $this->input->post('namaPasien'),
+			'tempatLahir' => $this->input->post('tempatLahir'),
+			'tanggalLahir' => $this->input->post('tanggalLahir'),
+			'jenisKelamin' => $this->input->post('jenisKelamin'),
+			'kampusAsal' => $this->input->post('kampusAsal'),
+			'kondisi' => $this->input->post('kondisi'),
+		);
+		$cek = $this->PasienModel->update_pasien($id,$data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Pasien Berhasil Diupdate');
+		} else {
+			$this->session->set_flashdata('info', 'Pasien Gagal Diupdate');
+		}
+		redirect('pasien','refresh');
 	}
 
 	public function hapusPasien($id_pasien)
 	{
-		$this->PasienModel->delete_pasien($id_pasien);
-		$this->index();
+		$cek = $this->PasienModel->delete_pasien($id_pasien);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Pasien Berhasil Dihapus');
+		} else {
+			$this->session->set_flashdata('info', 'Pasien Gagal Dihapus');
+		}
+		redirect('pasien','refresh');
 	}
 }
 

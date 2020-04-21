@@ -19,22 +19,47 @@ class rumahsakit extends CI_Controller {
 
 	public function tambahRS()
 	{
-		//$data = array ...
-		$this->RumahSakitModel->insert_rumahsakit($data);
-		$this->index();
+		$data = array (
+			'namaRs' => $this->input->post('namaRs'),
+			'jumlahApd' => $this->input->post('jumlahApd'),
+			'kamarTersedia' => $this->input->post('kamarTersedia'),
+			'jumlahStaffMedis' => $this->input->post('jumlahStaffMedis'),
+		);
+		$cek = $this->RumahSakitModel->insert_rumahsakit($data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Rumah Sakit Berhasil Ditambah');
+		} else {
+			$this->session->set_flashdata('info', 'Rumah Sakit Gagal Ditambah');
+		}
+		redirect('rumahsakit','refresh');
 	}
 
-	public function updateRS()
+	public function updateRS($id)
 	{
-		//$data = array ...
-		$this->RumahSakitModel->update_rumahsakit($data['id_rs'],$data);
-		$this->index();
+		$data = array (
+			'namaRs' => $this->input->post('namaRs'),
+			'jumlahApd' => $this->input->post('jumlahApd'),
+			'kamarTersedia' => $this->input->post('kamarTersedia'),
+			'jumlahStaffMedis' => $this->input->post('jumlahStaffMedis'),
+		);
+		$cek = $this->RumahSakitModel->update_rumahsakit($id,$data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Rumah Sakit Berhasil Diupdate');
+		} else {
+			$this->session->set_flashdata('info', 'Rumah Sakit Gagal Diupdate');
+		}
+		redirect('rumahsakit','refresh');
 	}
 
 	public function hapusRS($id_rs)
 	{
-		$this->RumahSakitModel->delete_rumahsakit($id_rs);
-		$this->index();
+		$cek = $this->RumahSakitModel->delete_rumahsakit($id_rs);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Rumah Sakit Berhasil Dihapus');
+		} else {
+			$this->session->set_flashdata('info', 'Rumah Sakit Gagal Dihapus');
+		}
+		redirect('rumahsakit','refresh');
 	}
 }
 

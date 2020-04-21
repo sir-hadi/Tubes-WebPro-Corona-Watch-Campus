@@ -11,7 +11,7 @@ class home extends CI_Controller {
 
 	public function index()
 	{
-		if (is_null($_SESSION['username'])) {
+		if (!$this->session->has_userdata('username')) {
 			$_SESSION['username'] = "Guest";
 		}
 		$content['dataPasien'] = $this->HomeModel->get_data_positif();
@@ -26,7 +26,7 @@ class home extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('/login','refresh');
+		redirect(base_url());
 	}
 
 
