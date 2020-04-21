@@ -75,34 +75,39 @@
                                 placeholder="Total Positive" name="jumlahTerjangkit" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total Death</label>
+                            <label for="formGroupExampleInput">Total Death</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
                                 placeholder="Total Death" name="jumlahMeninggal" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total Cure</label>
+                            <label for="formGroupExampleInput">Total Cure</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
                                 placeholder="Total Death" name="jumlahSembuh" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total ODP</label>
+                            <label for="formGroupExampleInput">Total ODP</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total ODP"
                                 name="jumlahODP" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total PDP</label>
+                            <label for="formGroupExampleInput">Total PDP</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total PDP"
                                 name="jumlahPDP" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total ODR</label>
+                            <label for="formGroupExampleInput">Total ODR</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total ODR"
                                 name="jumlahODR" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Nearest Hospital</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Nearest Hospital" name="rsTerdekat" required>
+                            <!-- tinggal terapin phpnya -->
+                            <label for="formGroupExampleInput">Nearest Hospital</label>
+                            <select class="custom-select" id="formGroupExampleInput">
+                                <option selected>Select Here..</option>
+                                <option value="1">RS Hermina Sukabumi</option>
+                                <option value="2">RS Jojo Diponegoro</option>
+                                <option value="3">RS NoU Semarang</option>
+                              </select required>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -137,34 +142,40 @@
                                 value="<?= $k['jumlahTerjangkit'] ?>"  name="jumlahTerjangkit" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total Death</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                            <label for="formGroupExampleInput">Total Death</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput"
                                 value="<?= $k['jumlahMeninggal'] ?>"  name="jumlahMeninggal" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total Cure</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                            <label for="formGroupExampleInput">Total Cure</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput"
                                 value="<?= $k['jumlahSembuh'] ?>"  name="jumlahSembuh" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total ODP</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $k['jumlahODP'] ?>" 
+                            <label for="formGroupExampleInput">Total ODP</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" value="<?= $k['jumlahODP'] ?>" 
                                 name="jumlahODP" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total PDP</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $k['jumlahPDP'] ?>" 
+                            <label for="formGroupExampleInput">Total PDP</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" value="<?= $k['jumlahPDP'] ?>" 
                                 name="jumlahPDP" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Total ODR</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $k['jumlahODR'] ?>" 
+                            <label for="formGroupExampleInput">Total ODR</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" value="<?= $k['jumlahODR'] ?>" 
                                 name="jumlahODR" required>
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput2">Nearest Hospital</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2"
-                                value="<?= $k['rsTerdekat'] ?>"  name="rsTerdekat" required>
+                            <!-- tinggal terapin phpnya -->
+                            <label for="formGroupExampleInput">Nearest Hospital</label>
+                            <select class="custom-select" id="formGroupExampleInput">
+                                <option selected>Select Here..</option>
+                                <option value="1">RS Hermina Sukabumi</option>
+                                <option value="2">RS Jojo Diponegoro</option>
+                                <option value="3">RS NoU Semarang</option>
+                              </select required>
+                        </div>
                         </div>
                 </div>
                 <div class="modal-footer">
