@@ -12,6 +12,7 @@
     <!-- end of Title Campus -->
 
     <!-- Add Campus button -->
+    <?php if ($_SESSION['username']!="Guest") { ?>
     <div class="arrowWhiteAnchorWithBottomBorder ml-4 mt-4">
         <a class="" href=""  data-toggle="modal" data-target="#addCampusModal">
             <div class="d-flex align-self-end">
@@ -24,26 +25,27 @@
             </div>
         </a>
     </div>
+    <?php } ?>
     <!-- end of Add Campus button -->
 
     <!-- Card Campus -->
     <div class="row align-self-center mt-5 ml-5 mr-4">
-        <?php foreach ($data as $d) {?>  
+        <?php foreach ($kampus as $k) {?>  
         <div class="col-lg-3 col-md-3 mb-4">
             <div class="card rounded-0" style="width: 18rem;">
-                <img src="https://m.ayobandung.com/images-bandung/post/articles/2019/08/13/60534/gedung_tel_u_(800_x_531).jpg"
-                    class="card-img-top rounded-0" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title display-5"><?= $d -> namakampus ?></h5>
+                    <h5 class="card-title display-5"><?= $k['namaKampus'] ?></h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Positive : <?= $d-> jumlahTerjangkit?></li>
-                    <li class="list-group-item">Death : <?= $d-> jumlahTerMeninggal?></li>
+                    <li class="list-group-item">Positive : <?= $k['jumlahTerjangkit']?></li>
+                    <li class="list-group-item">Death : <?= $k['jumlahMeninggal']?></li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link" data-toggle="modal" data-target="#viewCampusModal<?= $d->id?>">View</a>
-                    <a href="#" class="card-link" data-toggle="modal" data-target="#editCampusModal<?= $d->id?>">Edit</a>
-                    <a href="php code goes here" class="card-link">Delete</a>
+                    <a href="<?= site_url('kampus') ?>/<?= $k['id']?>" class="card-link" data-toggle="modal" data-target="#viewCampusModal<?= $k['id']?>">View</a>
+                    <?php if ($_SESSION['username']!="Guest") { ?>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#editCampusModal<?= $k['id']?>">Edit</a>
+                        <a href="<?= site_url('kampus') ?>/hapusKampus/<?= $k['id'] ?>" class="card-link">Delete</a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -61,12 +63,11 @@
                     <h4 class="display-4">Add Campus</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- isi form ini, TAMBAHIN ACTIONnya HAM -->
-                    <form method="POST" action="php stuff goes here">
+                    <form method="POST" action="<?= site_url('kampus') ?>/tambahKampus">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Campus Name</label>
                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Campus Name"
-                                name="namakampus" required>
+                                name="namaKampus" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Total Positive</label>
@@ -115,8 +116,8 @@
     <!-- End Of model add campus -->
 
     <!-- Modal Edit Campus , id = ...number ,number ini adalah id data -->
-    <?php foreach ($data as $d) {?>
-    <div class="modal fade" id="editCampusModal<?= $d -> id?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <?php foreach ($kampus as $k) {?>
+    <div class="modal fade" id="editCampusModal<?= $k['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content rounded-0">
@@ -124,52 +125,51 @@
                     <h4 class="display-4">Edit Campus</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- isi form ini -->
-                    <form method="POST" action="php stuff goes here">
+                    <form method="POST" action="<?= site_url('kampus') ?>/updateKampus/<?= $k['id'] ?>">
                         <div class="form-group">
                             <label for="formGroupExampleInput">Campus Name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Campus Name"
-                                name="namakampus" value="<?= $d->namakampus ?>" required>
+                            <input type="text" class="form-control" id="formGroupExampleInput" value="<?= $k['namaKampus'] ?>" 
+                                name="namaKampus" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Total Positive</label>
                             <input type="text" class="form-control" id="formGroupExampleInput"
-                                placeholder="Total Positive" name="jumlahTerjangkit" value="<?= $d->jumlahTerjangkit ?>" required>
+                                value="<?= $k['jumlahTerjangkit'] ?>"  name="jumlahTerjangkit" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total Death</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Total Death" name="jumlahMeninggal" value="<?= $d->jumlahMeninggal ?>" required>
+                                value="<?= $k['jumlahMeninggal'] ?>"  name="jumlahMeninggal" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total Cure</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Total Death" name="jumlahSembuh" value="<?= $d->jumlahSembuh ?>" required>
+                                value="<?= $k['jumlahSembuh'] ?>"  name="jumlahSembuh" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total ODP</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total ODP"
-                                name="jumlahODP" value="<?= $d->jumlahODP ?>" required>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $k['jumlahODP'] ?>" 
+                                name="jumlahODP" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total PDP</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total PDP"
-                                name="jumlahPDP" value="<?= $d->jumlahPDP ?>" required>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $k['jumlahPDP'] ?>" 
+                                name="jumlahPDP" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Total ODR</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Total ODR"
-                                name="jumlahODR" value="<?= $d->jumlahODR ?>" required>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" value="<?= $k['jumlahODR'] ?>" 
+                                name="jumlahODR" required>
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Nearest Hospital</label>
                             <input type="text" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Nearest Hospital" name="rsTerdekat" value="<?= $d->rsTerdekat ?>" required>
+                                value="<?= $k['rsTerdekat'] ?>"  name="rsTerdekat" required>
                         </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary rounded-0" data-dismiss="modal">Cancel</button>
-                    <input type="submit" class="btn btn-primary rounded-0" id="hapus" value="Submit" placeholder="Save">
+                    <input type="submit" class="btn btn-primary rounded-0" id="hapus" value="Submit" placeholder="Simpan">
                     </form>
                 </div>
             </div>
@@ -179,14 +179,14 @@
     <!-- End of modal edit Campus -->
 
     <!-- View Campus -->
-    <?php foreach ($data as $d) {?>
-    <div class="modal fade bd-example-modal-lg" id="viewCampusModal<?= $d->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"   
+    <?php foreach ($kampus as $k) {?>
+    <div class="modal fade bd-example-modal-lg" id="viewCampusModal<?= $k['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"   
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content rounded-0">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <h4 class="display-4 mt-3 ml-2 mb-4"><?php $d->namaKampus ?></h4>
+                        <h4 class="display-4 mt-3 ml-2 mb-4"><?php $k['namaKampus'] ?></h4>
                         <a href="" data-dismiss="modal">
                             <svg class="mt-4 mr-2" id="Capa_1" fill="currentColor" enable-background="new 0 0 413.348 413.348" height="28" viewBox="0 0 413.348 413.348" width="28" xmlns="http://www.w3.org/2000/svg"><path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"/>
                             </svg>
@@ -195,34 +195,34 @@
                     <div class="campusCoronaData row text-center mb-5">
                         <div class="col">
                             <h2>Positive</h2>
-                            <h3><?= $d->jumlahTerjangkit ?></h3>
+                            <h3><?= $k['jumlahTerjangkit'] ?></h3>
                         </div>
                         
                         <div class="col" >
                             <h2>Cure</h2>
-                            <h3><?= $d->jumlahSembuh ?></h3>
+                            <h3><?= $k['jumlahSembuh'] ?></h3>
                         </div>
     
                         <div class="col">
                             <h2>Death</h2>
-                            <h3><?= $d->jumlahSembuh ?></h3>
+                            <h3><?= $k['jumlahSembuh'] ?></h3>
                         </div>
                     </div>
 
                     <div class="campusCoronaData row text-center" style="margin-bottom: 30px;">
                         <div class="col">
                             <h2>ODP</h2>
-                            <h3><?= $d->jumlahODP ?></h3>
+                            <h3><?= $k['jumlahODP'] ?></h3>
                         </div>
                         
                         <div class="col">
                             <h2>PDP</h2>
-                            <h3><?= $d->jumlahPDP ?></h3>
+                            <h3><?= $k['jumlahPDP']?></h3>
                         </div>
     
                         <div class="col">
                             <h2>ODR</h2>
-                            <h3><?= $d->jumlahODR ?>
+                            <h3><?= $k['jumlahODR'] ?>
                         </h3>
                         </div>
                     </div>
@@ -245,7 +245,7 @@
 							/>
 						</svg>
 						<div class="lead">
-                        <?= $d->rsTerdekat ?> 
+                        <?= $k['rsTerdekat'] ?> 
 						</div>
                 </div>
             </div>

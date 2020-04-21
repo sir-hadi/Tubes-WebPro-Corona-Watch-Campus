@@ -86,6 +86,9 @@
 							<a class="nav-link" href="<?= site_url('pasien') ?>">Victim</a>
 						</li>
 						<li class="nav-item active">
+							<a class="nav-link" href="<?= site_url('rumahsakit') ?>">Hospital</a>
+						</li>
+						<li class="nav-item active">
 							<a class="nav-link" href="#">About Us</a>
 						</li>
 						<!-- Ini bisa berubah jadi username kalo dah login -->

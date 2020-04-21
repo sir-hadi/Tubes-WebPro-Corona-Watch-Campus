@@ -11,30 +11,63 @@ class kampus extends CI_Controller {
 
 	public function index()
 	{
-		$data = $this->KampusModel->get_all();
+		$content['kampus'] = $this->KampusModel->get_all();
 		$this->load->view('navbar');
-		$this->load->view('campusView',$data);
+		$this->load->view('campusView',$content);
 		$this->load->view('footer');
 	}
 
 	public function tambahKampus()
 	{
-		//$data = array ...
-		$this->KampusModel->insert_kampus($data);
-		$this->index();
+		$data = array (
+			'namaKampus' => $this->input->post('namaKampus'),
+			'jumlahTerjangkit' => $this->input->post('jumlahTerjangkit'),
+			'jumlahMeninggal' => $this->input->post('jumlahMeninggal'),
+			'jumlahSembuh' => $this->input->post('jumlahSembuh'),
+			'jumlahODP' => $this->input->post('jumlahODP'),
+			'jumlahPDP' => $this->input->post('jumlahPDP'),
+			'jumlahODR' => $this->input->post('jumlahODR'),
+			'rsTerdekat' => $this->input->post('rsTerdekat'),
+		);
+		$cek = $this->KampusModel->insert_kampus($data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Kampus Berhasil Ditambah');
+		} else {
+			$this->session->set_flashdata('info', 'Kampus Gagal Ditambah');
+		}
+		redirect('kampus','refresh');
 	}
 
-	public function updateKampus()
+	public function updateKampus($id)
 	{
-		//$data = array ...
-		$this->KampusModel->update_kampus($data['id_kampus'],$data);
-		$this->index();
+		$data = array (
+			'namaKampus' => $this->input->post('namaKampus'),
+			'jumlahTerjangkit' => $this->input->post('jumlahTerjangkit'),
+			'jumlahMeninggal' => $this->input->post('jumlahMeninggal'),
+			'jumlahSembuh' => $this->input->post('jumlahSembuh'),
+			'jumlahODP' => $this->input->post('jumlahODP'),
+			'jumlahPDP' => $this->input->post('jumlahPDP'),
+			'jumlahODR' => $this->input->post('jumlahODR'),
+			'rsTerdekat' => $this->input->post('rsTerdekat'),
+		);
+		$cek = $this->KampusModel->update_kampus($id,$data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Kampus Berhasil Diubah');
+		} else {
+			$this->session->set_flashdata('info', 'Kampus Gagal Diubah');
+		}
+		redirect('kampus','refresh');
 	}
 
-	public function hapusKampus($id_kampus)
+	public function hapusKampus($id)
 	{
-		$this->KampusModel->delete_kampus($id_kampus);
-		$this->index();
+		$cek = $this->KampusModel->delete_kampus($id);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Kampus Berhasil Dihapus');
+		} else {
+			$this->session->set_flashdata('info', 'Kampus Gagal Dihapus');
+		}
+		redirect('kampus','refresh');
 	}
 }
 
