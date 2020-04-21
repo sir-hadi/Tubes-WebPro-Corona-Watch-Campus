@@ -205,7 +205,7 @@
     
                         <div class="col">
                             <h2>Death</h2>
-                            <h3><?= $k['jumlahSembuh'] ?></h3>
+                            <h3><?= $k['jumlahMeninggal'] ?></h3>
                         </div>
                     </div>
 
@@ -251,5 +251,6 @@
             </div>
         </div>
     </div>
+</div>
     <?php } ?>
     <!-- End of View Campus -->
