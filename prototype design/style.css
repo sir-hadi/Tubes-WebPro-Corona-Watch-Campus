@@ -381,3 +381,20 @@ i {
 }
 
 /* ++++++++++++++ END OF PAGE READ ARTICLE ++++++++++++++ */
+
+/* ++++++++++++++ MASUK PAGE INPUT ARTICLE ++++++++++++++ */
+.titleInputArticle{
+	border: 0;
+	font-size: 40px;
+}
+
+.contentInputArticle{
+	border: 0;
+}
+
+.containerInputArticle{
+	margin-top: 10px;
+	padding: 20px;
+}
+
+/* ++++++++++++++ END OF PAGE INPUT ARTICLE ++++++++++++++ */
