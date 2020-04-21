@@ -35,7 +35,14 @@ $(document).ready(function () {
             $(this).animate({left: '-5px'});
         }
     );
-     
-    
+    // this does not work
+    $(".deletePatient").hover(function () {
+        // over
+        $(this).animate({left: '5px'});
+    }, function () {
+        // out
+        $(this).animate({color: 'black'});
+    }
+);
 
 });

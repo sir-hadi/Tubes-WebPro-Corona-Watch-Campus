@@ -95,6 +95,26 @@ body {
 }
 /* End Comment Anismasi */
 
+/* +++++++++ DIMULAI EFEFKTIF DAN TIDAK REDUNDAN +++++++++ */
+
+/* Title Bar Page warna biru dengan gambar di kanan */
+.titleBar{
+	height: 250px; background-color: steelblue;
+}
+
+.titleText{
+	padding-left: 20px; padding-bottom: 20px; color: white;
+}
+/* end of Title Bar Page warna biru dengan gambar di kanan */
+
+
+
+
+
+/* +++++++++ end of DIMULAI EFEFKTIF DAN TIDAK REDUNDAN +++++++++ */
+
+
+
 .intro {
 	background-image: url(https://www.premierhealth.com/images/default-source/default-album/p-c-mkt93775-mvhhero.jpg?sfvrsn=eff72e5e_2);
 	background-repeat: no-repeat;
@@ -110,7 +130,7 @@ body {
 
 #introTitle,
 #introDeskripsi,#introMore {
-	color: antiquewhite;
+	color: white;
 }
 
 i {
@@ -366,7 +386,9 @@ i {
 	background-image: url(img/the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg);
 	background-size: cover;
 }
-
+.inputArticleLink{
+	color: black;
+}
 
 
 /* ++++++++++++++ END OF PAGE ARTICLE ++++++++++++++ */
@@ -379,3 +401,43 @@ i {
 }
 
 /* ++++++++++++++ END OF PAGE READ ARTICLE ++++++++++++++ */
+
+/* ++++++++++++++ MASUK PAGE INPUT ARTICLE ++++++++++++++ */
+.titleInputArticle{
+	border: 0;
+	font-size: 40px;
+}
+
+.contentInputArticle{
+	border: 0;
+}
+
+.containerInputArticle{
+	margin-top: 10px;
+	padding: 20px;
+}
+
+/* ++++++++++++++ END OF PAGE INPUT ARTICLE ++++++++++++++ */
+
+
+/* ++++++++++++++ MASUK PAGE INPUT PASIEN ++++++++++++++ */
+.titlePatientImage{
+	background-image: url(img/sharon-mccutcheon-7PZ8Gb-pmaA-unsplash.jpg);
+	background-size: cover;
+}
+
+.deletePatient{
+	color : rgb(238, 52, 52);
+}
+
+.deletePatient :hover{
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	color : rgb(214, 50, 50)
+}
+
+.editPatient{
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+/* ++++++++++++++ END OF PAGE INPUT PASIEN +++++++++++++ */
