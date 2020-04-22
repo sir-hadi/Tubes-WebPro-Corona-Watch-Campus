@@ -49,6 +49,10 @@ class PasienModel extends CI_Model {
 		return $this->db->delete('pasien');
 	}
 
+	function get_pasien_list($limit, $start){
+        return $this->db->get('pasien', $limit, $start)->result_array();
+    }
+
 }
 
 /* End of file PasienModel.php */

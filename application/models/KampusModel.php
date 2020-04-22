@@ -14,6 +14,12 @@ class KampusModel extends CI_Model {
 		return $this->db->get('kampus')->row_array();
 	}
 
+	// Get kampus berdasarkan nama
+	public function get_kampus_nama($nama){
+		$this->db->where('namaKampus', $nama);
+		return $this->db->get('kampus')->row_array();
+	}
+
 	// Get kampus berdasarkan Rumah Sakit terdekat
 	public function get_kampus_rs($rsTerdekat){
 		$this->db->where('rsTerdekat', $rsTerdekat);
