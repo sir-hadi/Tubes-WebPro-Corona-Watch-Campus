@@ -2,27 +2,27 @@
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="<?= site_url() ?>">Homepage</a></li>
 		<li class="breadcrumb-item"><a href="<?= site_url() ?>/artikel">Article</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Input Article</li>
+		<li class="breadcrumb-item active" aria-current="page">Edit Article</li>
 	</ol>
 </nav>
 
 <!-- form input article -->
 <div class="container containerInputArticle align-items-center">
- 	<form action="<?= site_url('artikel') ?>/tulisArtikel" method="post">
+ 	<form action="<?= site_url('artikel') ?>/editArtikel/<?= $artikel['idArtikel'] ?>" method="post">
 
  		<!-- judul -->
  		<div class="form-group">
- 			<input class="form-control form-control-lg titleInputArticle" type="text" name="judul" placeholder="Add Title Here!">
+ 			<input class="form-control form-control-lg titleInputArticle" type="text" name="judul" value="<?= $artikel['judul'] ?>">
  		</div>
 
  		<!-- penulis -->
  		<div class="form-group">
- 			<input class="form-control penulisInputArticle" type="text" name="penulis" placeholder="Add Writer Here!">
+ 			<input class="form-control penulisInputArticle" type="text" name="penulis" value="<?= $artikel['penulis'] ?>">
  		</div>
 
  		<!-- isi -->
  		<div class="form-group border-top border-bottom border-dark">
- 			<textarea class="form-control contentInputArticle" name="isi" rows="24" placeholder="write here!"></textarea>
+ 			<textarea class="form-control contentInputArticle" name="isi" rows="24" value="<?= $artikel['isi'] ?>"></textarea>
  		</div>
 
  		<!-- submit button -->

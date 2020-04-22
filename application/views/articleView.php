@@ -3,7 +3,7 @@
 		<span class="titleArticle display-4 ml-4 mb-3 pr-4 border-right border-dark" >ARTICLE</span>
 		<?php if ($_SESSION['username']!="Guest") { ?>
 		<span class="inputArticle display-5 ml-4 mb-3" >
-			<a class="inputArticleLink" style="text-decoration: none;" href="#">Input Article</a>
+			<a class="inputArticleLink" style="text-decoration: none;" href="<?= site_url() ?>/artikel/formTulisArtikel">Input Article</a>
 		</span>
 		<?php } ?>
 	</div>

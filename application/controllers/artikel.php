@@ -60,24 +60,57 @@ class artikel extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function tulisArtikel()
+	public function formTulisArtikel()
 	{
-		//function to insert new article. No page yet
-
-		// $data = array ...
-		// $this->ArtikelModel->insert_artikel($data);
-		// $this->index();
+		$this->load->view('navbar');
+		$this->load->view('inputArticleView');
+		$this->load->view('footer');
 	}
 
-	public function editArtikel()
+	public function tulisArtikel()
 	{
-		//function to edit an article. No page yet
+		$data = array (
+			'judul' => $this->input->post('judul'),
+			'penulis' => $this->input->post('penulis'),
+			'isi' => $this->input->post('isi'),
+		);
+		$cek = $this->ArtikelModel->insert_artikel($data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Kampus Berhasil Ditambah');
+		} else {
+			$this->session->set_flashdata('info', 'Kampus Gagal Ditambah');
+		}
+		redirect('artikel','refresh');
+	}
+
+	public function formEditArtikel($id)
+	{
+		$content['artikel'] = $this->ArtikelModel->get_artikel_id($id);
+		$this->load->view('navbar');
+		$this->load->view('editArticleView',$content);
+		$this->load->view('footer');
+	}
+
+	public function editArtikel($id)
+	{
+		$data = array (
+			'judul' => $this->input->post('judul'),
+			'penulis' => $this->input->post('penulis'),
+			'isi' => $this->input->post('isi'),
+		);
+		$cek = $this->ArtikelModel->update_artikel($id, $data);
+		if ($cek) {
+			$this->session->set_flashdata('info', 'Kampus Berhasil Ditambah');
+		} else {
+			$this->session->set_flashdata('info', 'Kampus Gagal Ditambah');
+		}
+		redirect('artikel','refresh');
 	}
 
 	public function hapusArtikel($id_artikel)
 	{
 		$this->ArtikelModel->delete_artikel($id_artikel);
-		$this->index();
+		redirect('artikel','refresh');
 	}
 
 }

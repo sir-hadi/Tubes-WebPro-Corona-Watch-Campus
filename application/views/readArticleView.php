@@ -1,6 +1,12 @@
 <div class="articleTitleBar row">
 	<div class="col d-flex align-items-end">
 		<div class="titleArticle display-4 ml-4 mb-3" >ARTICLE</div>
+		<?php if ($_SESSION['username']!="Guest") { ?>
+		<span class="inputArticle display-5 ml-4 mb-3" >
+			<a class="inputArticleLink" style="text-decoration: none;" href="<?= site_url() ?>/artikel/formEditArtikel/<?= $artikel['idArtikel'] ?>">Edit Article</a>
+			<a class="inputArticleLink" style="text-decoration: none;" href="<?= site_url() ?>/artikel/hapusArtikel/<?= $artikel['idArtikel'] ?>">Delete Article</a>
+		</span>
+		<?php } ?>
 	</div>
 	<div
 		class="titleArticleImage col-4"	
