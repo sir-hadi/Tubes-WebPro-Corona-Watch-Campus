@@ -8,6 +8,11 @@ class RumahSakitModel extends CI_Model {
 		return $this->db->get('rumahsakit')->result_array();
 	}
 
+	// Get rumahsakit for Hospital page
+	function get_rs_list($limit, $start){
+        return $this->db->get('rumahsakit', $limit, $start)->result_array();
+    }
+
 	// Get rumahsakit berdasarkan id
 	public function get_rumahsakit_id($idRumahSakit){
 		$this->db->where('id', $idRumahSakit);
