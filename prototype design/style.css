@@ -420,7 +420,7 @@ i {
 /* ++++++++++++++ END OF PAGE INPUT ARTICLE ++++++++++++++ */
 
 
-/* ++++++++++++++ MASUK PAGE INPUT PASIEN ++++++++++++++ */
+/* ++++++++++++++ MASUK PAGE PASIEN ++++++++++++++ */
 .titlePatientImage{
 	background-image: url(img/sharon-mccutcheon-7PZ8Gb-pmaA-unsplash.jpg);
 	background-size: cover;
@@ -440,4 +440,27 @@ i {
 	transition: all 0.4s ease;
 	-webkit-transition: all 0.4s ease;
 }
-/* ++++++++++++++ END OF PAGE INPUT PASIEN +++++++++++++ */
+/* ++++++++++++++ END OF PAGE PASIEN +++++++++++++ */
+
+/* ++++++++++++++ MASUK PAGE HOSPITAL ++++++++++++++ */
+.titleHospitalImage{
+	background-image: url(img/esaias-tan-JeWyWRMH4rQ-unsplash.jpg);
+	background-size: cover;
+}
+
+.deleteHospital{
+	color : rgb(238, 52, 52);
+}
+
+.deleteHospital :hover{
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	color : rgb(214, 50, 50)
+}
+
+.editHospital{
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+
+/* ++++++++++++++ END OF PAGE HOSPITAL +++++++++++++ */
