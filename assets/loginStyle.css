@@ -1,17 +1,13 @@
 body{
 	min-height: 100vh;
-	background: #eee;
+	background-image: url("img/hospitalLogin.jpg");
+	background-size: cover;
 }
 form{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
 	background: white;
-	border-radius: 5px;
 	padding: 30px;
 	text-align: center;
-	width: 512px;
+	width: 420px;
 }
 main{
 	min-height: 100vh;
@@ -28,4 +24,25 @@ main .profile-info{
 main .profile-info figure{
 	max-width: 512px;
 	margin: auto;
+}
+.loginContainer{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.titleBar{
+	background: steelblue;
+	color: white;
+	width: 420px;
+	height: 128px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.display-5{
+	font-weight: 300;
+	font-size: xx-large;
 }

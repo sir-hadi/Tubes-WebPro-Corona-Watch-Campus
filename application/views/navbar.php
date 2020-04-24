@@ -109,8 +109,8 @@
 				<div class="col-2">
 					<img
 						class="logo"
-						src="https://pngimage.net/wp-content/uploads/2018/05/cdc-logo-png-5.png"
-						alt=""
+						src="<?php echo base_url().'assets/img/CWC_LOGO.png' ?>"
+						alt="logo"
 					/>
 				</div>
 				<div class="col-4">

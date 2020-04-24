@@ -11,7 +11,7 @@
 				>
 					<img
 						class="logo"
-						src="https://pngimage.net/wp-content/uploads/2018/05/cdc-logo-png-5.png"
+						src="<?php echo base_url().'assets/img/CWC_LOGO.png' ?>"
 						alt=""
 					/>
 					<p>
@@ -20,7 +20,7 @@
 						faucibus faucibus, purus erat eleifend enim, porta pellentesque ex
 						mi ut sem.
 					</p>
-					<p>© 2020 MadF, All rights reserved</p>
+					<p>© 2020 MadF & MadetheMeep, All rights reserved</p>
 				</div>
 				<div
 					class="col-md-3 footer-nav animated fadeInUp"

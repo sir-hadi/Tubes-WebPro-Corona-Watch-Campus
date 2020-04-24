@@ -12,22 +12,22 @@
 
  		<!-- judul -->
  		<div class="form-group">
- 			<input class="form-control form-control-lg titleInputArticle" type="text" name="judul" placeholder="Add Title Here!">
+ 			<input class="form-control form-control-lg titleInputArticle rounded-0" type="text" name="judul" placeholder="Add Title Here!">
  		</div>
 
  		<!-- penulis -->
  		<div class="form-group">
- 			<input class="form-control penulisInputArticle" type="text" name="penulis" placeholder="Add Writer Here!">
+ 			<input class="form-control penulisInputArticle rounded-0" type="text" name="penulis" placeholder="Add Writer Here!">
  		</div>
 
  		<!-- isi -->
- 		<div class="form-group border-top border-bottom border-dark">
+ 		<div class="form-group border-top border-bottom border-dark rounded-0">
  			<textarea class="form-control contentInputArticle" name="isi" rows="24" placeholder="write here!"></textarea>
  		</div>
 
  		<!-- submit button -->
  		<div class="col text-center">
- 			<button type="submit" class="btn btn-primary">Submit</button>
+ 			<button type="submit" class="btn btn-primary rounded-0">Submit</button>
  		</div>
  		
  	</form>

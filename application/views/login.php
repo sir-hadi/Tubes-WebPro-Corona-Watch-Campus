@@ -8,21 +8,24 @@
 	</head>
 	
 	<body>
-		<form action="<?= site_url('login/login') ?>" method="post">
-			<h2>Login</h2>
-			<?php if(isset($error_message)) { ?>
-			<div class="alert alert-danger" role="alert">
-				<?= $error_message ?>
-			</div>
-			<?php } ?>
-			<div class="form-group">
-				<input type="text" class="form-control" name="username" placeholder="Username" required>
-			</div>
-			<div class="form-group">
-				<input type="password" class="form-control" name="password" placeholder="Password" required>
-			</div>
-			<button type="submit" class="btn btn-primary">Login</button>
-			<a class="btn btn-info" href="<?= site_url() ?>/login/guest" role="button">Guest</a>
-		</form>
+		<div class="loginContainer">
+			<div class="titleBar display-5">Corona Watch Campus</div>
+			<form action="<?= site_url('login/login') ?>" method="post">
+				<h2>Login</h2>
+				<?php if(isset($error_message)) { ?>
+				<div class="alert alert-danger" role="alert">
+					<?= $error_message ?>
+				</div>
+				<?php } ?>
+				<div class="form-group">
+					<input type="text" class="form-control rounded-0" name="username" placeholder="Username" required>
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control rounded-0" name="password" placeholder="Password" required>
+				</div>
+				<button type="submit" class="btn btn-primary rounded-0">Login</button>
+				<a class="btn btn-info rounded-0" href="<?= site_url() ?>/login/guest" role="button">Guest</a>
+			</form>
+		</div>
 	</body>
 </html>
