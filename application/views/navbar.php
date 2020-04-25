@@ -30,7 +30,7 @@
 	</head>
 
 	<body>
-		<header>
+		<header class="mb-3">
 			<!-- emergency Tab -->
 			<div id="emergencyTab">
 				<div class="row align-items-center" id="emergencyRow">
@@ -57,7 +57,13 @@
 			</div>
 			<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="<?= site_url() ?>">CWC</a>
+				<a class="navbar-brand" href="<?= site_url() ?>">
+					<img
+						class="logo"
+						src="<?php echo base_url().'assets/img/CWC_LOGO.png' ?>"
+						alt=""
+					/>	
+				</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -104,17 +110,4 @@
 					</ul>
 				</div>
 			</nav>
-
-			<div class="row">
-				<div class="col-2">
-					<img
-						class="logo"
-						src="<?php echo base_url().'assets/img/CWC_LOGO.png' ?>"
-						alt="logo"
-					/>
-				</div>
-				<div class="col-4">
-					<!-- MegaMenu Goes Here i think(?) -->
-				</div>
-			</div>
 		</header>
