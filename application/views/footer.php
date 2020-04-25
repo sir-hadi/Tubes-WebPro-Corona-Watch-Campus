@@ -1,6 +1,6 @@
 <!-- footer -->
 <footer class="footer">
-			<div class="row" style="">
+			<div class="row">
 				<div
 					class="col-md-5"
 					style="
@@ -10,7 +10,7 @@
 					"
 				>
 					<img
-						class="logo"
+						class="logo-f mb-3"
 						src="<?php echo base_url().'assets/img/CWC_LOGO.png' ?>"
 						alt=""
 					/>

@@ -43,6 +43,8 @@ body {
 	height: 70px;
 }
 
+.logo-f { height: 100px;}
+
 #emergencyRow {
 	padding: 12px;
 	-webkit-transition: 0.3s ease;
