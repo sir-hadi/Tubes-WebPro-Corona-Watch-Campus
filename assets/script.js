@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $.getJSON("dataTeam.json",function (data) {
+    $.getJSON("<?php echo base_url().'assets/dataTeam.json' ?>",function (data) {
             console.log("test");
             console.log(data.length);
             var html = '<div class="row d-flex justify-content-center mt-5">';

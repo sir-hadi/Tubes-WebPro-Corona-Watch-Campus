@@ -35,7 +35,7 @@
 							<li class="lead"><a href="<?= site_url('artikel') ?>">Article</a></li>
 							<li class="lead"><a href="<?= site_url('kampus') ?>">Campus</a></li>
 							<li class="lead"><a href="<?= site_url('pasien') ?>">Victim</a></li>
-							<li class="lead"><a href="#">About Us</a></li>
+							<li class="lead"><a href="<?= site_url('team') ?>">About Us</a></li>
 						</ul>
 					</div>
 				</div>
