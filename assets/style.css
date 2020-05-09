@@ -91,7 +91,7 @@ body {
 
 #emergencyQuestion:hover::after {
     width: 100%;
-    transition: width .3s;
+	transition: width .3s;
 }
 /* End Comment Anismasi */
 
@@ -131,6 +131,7 @@ body {
 #introDeskripsi,#introMore {
 	color: white;
 }
+
 
 /* Icon Panah */
 .arrowRight {
@@ -460,3 +461,18 @@ body {
 }
 
 /* ++++++++++++++ END OF PAGE HOSPITAL +++++++++++++ */
+
+/* ++++++++++++++ MASUK OUR TEAM +++++++++++++++ */
+.titleTeamImage{
+	background-size: cover;
+	background-image: url(img/you-x-ventures-Oalh2MojUuk-unsplash.jpg)
+}
+.teamName{
+	border-bottom: 1px solid steelblue; border-spacing: 10px;
+}
+
+.teamJob{
+	color: gray;
+}
+
+/* ++++++++++++++ END OF OUR TEAM ++++++++++++++ */

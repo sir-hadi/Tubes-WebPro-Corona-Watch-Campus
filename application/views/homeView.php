@@ -248,7 +248,7 @@
 						<h4 class="rekrutTittle display-4">
 							LEARN MORE ABOUT OUR WORLD-CLASS FACILITY
 						</h4>
-						<a class="rekrutAnchor" href="">
+						<a class="rekrutAnchor" href="<?= site_url('team') ?>">
 							<div class="d-flex align-self-end">
 								<div class="mr-auto p-2">
 									<p class="rekrutDisMor lead">Discover More</p>
