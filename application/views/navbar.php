@@ -26,6 +26,9 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 			crossorigin="anonymous"
 		></script>
+		<script src= 
+			"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    	</script>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/style.css'?>" />
 	</head>
 
@@ -95,7 +98,7 @@
 							<a class="nav-link" href="<?= site_url('rumahsakit') ?>">Hospital</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="#">About Us</a>
+							<a class="nav-link" href="<?= site_url('team') ?>">About Us</a>
 						</li>
 						<!-- Ini bisa berubah jadi username kalo dah login -->
 						<?php if ($_SESSION['username']!="Guest") { ?>
