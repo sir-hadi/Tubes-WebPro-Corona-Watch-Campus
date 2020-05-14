@@ -476,3 +476,23 @@ body {
 }
 
 /* ++++++++++++++ END OF OUR TEAM ++++++++++++++ */
+
+/* ++++++++++++++ MASUK PAGE ABOUT US ++++++++++++++ */
+.aboutUsTitleBar{
+	height: 250px; 
+	background-image: url(img/aboutUsTitle.jpg);
+	background-position: 50% 80%;
+	background-size: cover;
+}
+
+.aboutUsCarousel{
+	height: 500px;
+}
+
+.aboutUsIcons{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+/* ++++++++++++++ END OF PAGE ABOUT US ++++++++++++++ */
