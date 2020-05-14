@@ -45,7 +45,7 @@
 	</div>
 
 	<!-- carousel -->
-	<div class="carousel slide mt-3 mb-4">
+	<div id="carouselIndicator" class="carousel slide mt-3 mb-4">
 		<div class="carousel-inner">
 			<div class="carousel-item active aboutUsCarousel">
 		      <img class="d-block w-100" src="img/carousel1.jpg" alt="First slide">
