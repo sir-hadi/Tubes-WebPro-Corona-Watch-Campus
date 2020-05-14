@@ -163,7 +163,6 @@ class pasien extends CI_Controller {
 		} else {
 			$this->session->set_flashdata('info', 'Pasien Gagal Diupdate');
 		}
-		echo json_encode($data);
 		redirect('pasien','refresh');
 	}
 
@@ -198,7 +197,6 @@ class pasien extends CI_Controller {
 		} else {
 			$this->session->set_flashdata('info', 'Pasien Gagal Dihapus');
 		}
-		echo json_encode($data);
 		redirect('pasien','refresh');
 	}
 }

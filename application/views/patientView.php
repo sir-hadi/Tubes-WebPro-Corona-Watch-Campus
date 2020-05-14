@@ -43,7 +43,7 @@
                 <?php } ?>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="theData">
             <tr>
                 <?php $index=1; foreach (array_reverse($pasien) as $p) { ?>
                 <th scope="col" class="lead"><?php echo $index++; ?></th>
@@ -94,18 +94,18 @@
             </div>
             <div class="modal-body">
                 <!-- isi form ini -->
-                <form method="POST" action="<?= site_url('pasien') ?>/tambahPasien">
+                <form method="POST" action="<?= site_url('pasien') ?>/tambahPasien" id="add-pasien">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Patient Name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Patient Name" name="namaPasien" required>
+                        <input type="text" class="form-control" id="namaPasien" placeholder="Patient Name" name="namaPasien" required>
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Birthplace</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Patient birthplace" name="tempatLahir" required>
+                        <input type="text" class="form-control" id="tempatLahir" placeholder="Patient birthplace" name="tempatLahir" required>
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Birthdate (YYYY-MM-DD)</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Birthdate (YYYY-MM-DD)" name="tglLahir" required>
+                        <input type="text" class="form-control" id="tglLahir" placeholder="Birthdate (YYYY-MM-DD)" name="tglLahir" required>
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Gender</label>
