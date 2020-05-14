@@ -46,12 +46,6 @@
 
 	<!-- carousel -->
 	<div class="carousel slide mt-3 mb-4">
-		<ol class="carousel-indicators">
-		    <li data-slide-to="0" class="active"></li>
-		    <li data-slide-to="1"></li>
-		    <li data-slide-to="2"></li>
-		    <li data-slide-to="3"></li>
-		  </ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active aboutUsCarousel">
 		      <img class="d-block w-100" src="img/carousel1.jpg" alt="First slide">
@@ -66,6 +60,20 @@
 		      <img class="d-block w-100" src="img/carousel4.jpg" alt="Third slide">
 		    </div>
 		</div>
+		<ol class="carousel-indicators">
+		    <li data-target="#carouselIndicator" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselIndicator" data-slide-to="1"></li>
+		    <li data-target="#carouselIndicator" data-slide-to="2"></li>
+		    <li data-target="#carouselIndicator" data-slide-to="3"></li>
+		</ol>
+		<a class="carousel-control-prev" href="#carouselIndicator" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselIndicator" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		</a>
 	</div>
 
 	<!-- last paragraphs -->
