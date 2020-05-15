@@ -98,7 +98,10 @@
 							<a class="nav-link" href="<?= site_url('rumahsakit') ?>">Hospital</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="<?= site_url('team') ?>">About Us</a>
+							<a class="nav-link" href="<?= site_url('aboutus') ?>">About Us</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="<?= site_url('team') ?>">Our Team</a>
 						</li>
 						<!-- Ini bisa berubah jadi username kalo dah login -->
 						<?php if ($_SESSION['username']!="Guest") { ?>

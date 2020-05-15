@@ -3,34 +3,34 @@
 		"image" : "img/Hadi.jpg" ,	 
         "name": "Abdullah Hadi", 
         "job": "Senior Frontend Dev", 
-		"desc": "lorem ipsum" 
+		"desc": "Bekasi" 
     },
 
 	{
 		"image" : "img/Ilham.jpg" ,
 		"name": "Ilham Rizki Hidayat",
 		"job": "Senior Backend Dev",
-		"desc": "lorem ipsum"
+		"desc": "Sukabumi"
     },
     
 	{
 		"image" : "img/Made.jpg" ,
 		"name": "Made Indrayana Putra",
 		"job": "Junior Frontend Dev",
-		"desc": "lorem ipsum"
+		"desc": "Semarang"
     },
     
 	{
 		"image" : "img/Ivan.jpg" ,
 		"name": "Mochammad Ivan A.P.",
 		"job": "Junior Backend Dev",
-		"desc": "lorem ipsum"
+		"desc": "Ponorogo"
     },
     
 	{
 		"image" : "img/Nabil.jpg" ,
 		"name": "Nabil Anwar Fauzi",
 		"job": "Junior Backend Dev",
-		"desc": "lorem ipsum"
+		"desc": "Padang"
 	}
 ]

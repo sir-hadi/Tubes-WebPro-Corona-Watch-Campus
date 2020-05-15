@@ -49,7 +49,7 @@ class pasien extends CI_Controller {
 		$content['kampus'] = $this->KampusModel->get_all();
 		$this->load->view('navbar');
 		$this->load->view('patientView',$content);
-		$this->load->view('footer');
+		// $this->load->view('footer');
 	}
 
 	public function pasien_data()

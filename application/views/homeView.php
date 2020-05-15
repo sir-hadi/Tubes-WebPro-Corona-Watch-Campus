@@ -3,7 +3,7 @@
 				<h3 class="display-3" id="introTitle">
 					WELCOME TO<br />CORONA<br />WATCH<br />CAMPUS
 				</h3>
-				<a href="" class="lead" id="introMore"
+				<a href="<?= site_url('aboutus') ?>" class="lead" id="introMore"
 					>Find Out More <i class="arrowRight"></i
 				></a>
 			</div>
