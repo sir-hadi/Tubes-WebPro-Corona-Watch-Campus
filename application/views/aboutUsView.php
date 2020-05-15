@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.carousel').carousel({
-		  interval: 4000
+		  interval: 4000;
 		});
 		$('.carousel').carousel('cycle');
 	});
@@ -45,7 +45,7 @@
 	</div>
 
 	<!-- carousel -->
-	<div id="carouselIndicator" class="carousel slide mt-3 mb-4">
+	<div id="carouselIndicator" class="carousel slide mt-3 mb-4" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active aboutUsCarousel">
 		      <img class="d-block w-100" src="<?php echo base_url().'assets/img/carousel1.jpg'?>" alt="First slide">

@@ -69,14 +69,14 @@ $(document).ready(function () {
             $(this).animate({left: '-5px'});
         }
     );
-    $("a").hover(function () {
-            // over
-            $(this).animate({left: '5px'});
-        }, function () {
-            // out
-            $(this).animate({left: '-5px'});
-        }
-    );
+    // $("a").hover(function () {
+    //         // over
+    //         $(this).animate({left: '5px'});
+    //     }, function () {
+    //         // out
+    //         $(this).animate({left: '-5px'});
+    //     }
+    // );
 
 
 });
